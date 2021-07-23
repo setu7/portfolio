@@ -1,0 +1,38 @@
+/* 横幅が640pxの時 モバイル縦向き用 */
+
+@charset "utf-8";
+
+#profile img{
+  width: 200px;
+  height: 200px;
+}
+
+#profile p{
+  font-size: 14px;
+  text-align: left;
+}
+
+#product_content{
+  display: flex;
+  flex-direction: column; /* 画像を上下に並べる */
+  align-items: center;  /* 画像を真ん中にする */
+}
+
+#pagetop a{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#skill_content{
+  display: flex;
+  flex-direction: column; /* 画像を上下に並べる */
+  align-items: center; /* 画像を真ん中にする */
+}
+
+#product_video{
+  width: 100%;
+}

@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/*base*/
+
+body{
+  margin: 0; /*背景の余白をなしにする*/
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ",sans-serif ; /*文字を統一する*/
+}
+
+h1,h2,p{
+  margin:0;
+  padding:0;
+}
+
+h2{
+  font-size: 25px;
+  color: #000000;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+a{
+  text-decoration: none; /*下線を消す*/
+}
+
+li{
+  list-style-type: none; /*リストの最初の点を消す*/
+}
+
+section{
+  text-align: center; /*文字寄せを中央にする*/
+}
+
+/* header */
+
+.header{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)),url('../image/kristopher-roller-zepnJQycr4U-unsplash.jpg') 50%; /*上下のグラデーションができる*/
+  background-size: cover; /* 画像のサイズを画面に合わせる */
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.header__nav{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(156, 146, 243); 
+  z-index: 10;
+}
+
+.header__menu{
+  display: flex;
+  justify-content: space-around;
+  float: right;
+  padding: 20px;
+}
+
+.header__menu__item{
+  padding-right:10px;
+  font-size:18px;
+}
+
+.header__menu__item a{
+  color: white;
+  text-shadow: none;
+}
+
+.header__menu__item a:hover{
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 90px;
+  padding-top: 240px;
+  font-weight: lighter; /*文字を細くする*/
+}
+
+/* profile */
+
+#profile{
+  width: 100%;
+  padding: 50px 0;
+  background-color: rgb(233, 233, 255);
+  text-align: center;
+}
+
+#profile img{
+  width:250px;
+  height: 250px;
+  border-radius: 100%; /* 画像の角をなくし、丸の状態にする */
+  margin: 30px 0 40px 0;
+}
+
+#profile p{
+  padding: 0 50px;
+}
+
+/* skill */
+
+#skill{
+  width: 100%;
+  padding: 50px 0;
+}
+
+#skill_content{
+  display: flex;
+  justify-content: space-around; /* グラフを横並びで間隔を開けて配置 */
+}
+
+/* main */
+
+#product{
+  width: 100%;
+  padding: 50px 0;
+  background-color: rgb(233, 233, 255);
+}
+
+#product_content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.product_box{
+  width:250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+#product img{
+  width:250px;
+  height: 250px;
+  padding: 0;
+}
+
+#product img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+#product p{
+  margin: 10px;
+}
+
+/* contact */
+
+#contact{
+  width: 100%;
+  padding: 50px 0;
+}
+
+h2{
+  padding-bottom: 10px;
+}
+
+label{
+  vertical-align: top; /* ラベルを一番上に配置 */
+  padding: 3px;
+}
+
+input#name{
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+input#email{
+  margin-right: 14px;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+textarea{
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+.button{
+  position: relative;
+  display: inline-block;
+  color: white;
+  background-color: rgb(156, 146, 243);
+  border: 1px solid rgb(156, 146, 243);
+  padding: 10px 30px;
+  margin: 0 20px;
+  border-radius: 100vh;
+}
+
+.button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(156, 146, 243);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.reset, .back{
+  color: rgb(156, 146, 243);
+  background-color: rgb(233, 233, 255);
+}
+
+span.mail_ph{
+  color: red;
+  margin-left: 5px;
+}
+
+/* footer */
+
+footer{
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+  background-color: rgb(156, 146, 243);
+}
+
+/* pagetop return button */
+#pagetop{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  background-color: rgb(156, 146, 243);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#pagetop a{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#pagetop a::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f106'; /* option + ¥ でバックスラッシュは出る*/
+  font-weight: 900;
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* SafariのCSSの変化に対応*/
+_::-webkit-full-page-media, _:future, :root #pagetop a::before{
+  top:10%;
+  right:0;
+  left:23%;
+}
